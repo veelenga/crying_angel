@@ -1,6 +1,7 @@
 
 module CryingAngel
-  # Represents an Angel, that someday was a Human and now look so far.
+  # Represents an Angel, that someday was a Human and
+  # can see a hole territory.
   class Angel < Human
     attr_reader :view_dist
 

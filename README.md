@@ -1,30 +1,52 @@
-# CryingAngel
+# CryingAngel [![Build Status](https://api.travis-ci.org/veelenga/crying_angel.svg?branch=master)](https://travis-ci.org/veelenga/crying_angel)
 
-TODO: Write a gem description
+My solution for "crying angel" problem.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Clone a repository and execute the following sequence of commands:
 
 ```ruby
-gem 'crying_angel'
+bundle install
+bundle exec rspec
+gem build crying_angel.gemspec
+gem install cyring_angel-0.0.1.gem
 ```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install crying_angel
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'crying_angel'
+
+ol = Location.new(0, 10)   # Olenka's location
+il = Location.new(301, 10) # Ivanko's location
+al = Location.new(0, 0)    # Angel's location
+
+p angel_cries?(ol, il, al) # => true
+```
+
+Go to [specs](spec/crying_angel_spec.rb) to find more examples. Here is how it looks with formatted documentation option:
+
+```ruby
+#angel_cries?
+  angel can not see Olenka but can see Ivanko
+    returns false
+  angel can not see Ivanko but can see Olenka
+    returns false
+  angel can not see both
+    returns false
+  angel can see both
+    returns false if distance between Ivanko and Olenka <= 300 km
+    returns true if distance between Ivanko and Olenka > 300 km
+```
+
+## Documentation
+
+Full docs you can find [here](http://www.rubydoc.info/github/veelenga/crying_angel).
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/crying_angel/fork )
+1. Fork it ( https://github.com/veelenga/crying_angel/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)

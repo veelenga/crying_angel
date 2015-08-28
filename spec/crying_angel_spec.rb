@@ -49,7 +49,7 @@ module CryingAngel
       end
 
       context 'angel can see both' do
-        it 'returns false if distance between Ivanko and Oleknka <= 300 km' do
+        it 'returns false if distance between Ivanko and Olenka <= 300 km' do
           expect(subject.angel_cries?( # equal to 300
             Location.new(500, 500),
             Location.new(500, 200),
@@ -61,7 +61,7 @@ module CryingAngel
             Location.new(500, 500))).to be false
         end
 
-        it 'returns true if distance between Ivanko and Oleknka > 300 km' do
+        it 'returns true if distance between Ivanko and Olenka > 300 km' do
           expect(subject.angel_cries?(
             Location.new(500, 500),
             Location.new(500, 0),
