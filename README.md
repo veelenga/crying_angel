@@ -1,4 +1,4 @@
-# CryingAngel [![Build Status](https://api.travis-ci.org/veelenga/crying_angel.svg?branch=master)](https://travis-ci.org/veelenga/crying_angel)
+# CryingAngel [![Build Status](https://api.travis-ci.org/veelenga/crying_angel.svg?branch=master)](https://travis-ci.org/veelenga/crying_angel) [![Code Climate](https://codeclimate.com/github/veelenga/crying_angel/badges/gpa.svg)](https://codeclimate.com/github/veelenga/crying_angel) [![Test Coverage](https://codeclimate.com/github/veelenga/crying_angel/badges/coverage.svg)](https://codeclimate.com/github/veelenga/crying_angel/coverage) [![Inline docs](http://inch-ci.org/github/veelenga/crying_angel.svg?branch=master)](http://inch-ci.org/github/veelenga/crying_angel)
 
 My solution for "crying angel" problem.
 
