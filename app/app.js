@@ -157,13 +157,23 @@ function canvasApp() {
 
   function isAngelCrying(curDistance, olenka, ivanko, angel){
     var d1 = getDistance(angel, olenka);
-    if (d1 > angelView) {
-      return false; // angel does not know where is olenka
+    var d2 = getDistance(angel, ivanko);
+    var presumablyDistance = angelView - startCryDistance
+
+    if (d1 > angelView) { // angel does not know where is olenka
+      if (d2 < presumablyDistance) {
+        return true;
+      } else {
+        return false;
+      }
     }
 
-    var d2 = getDistance(angel, ivanko);
-    if (d2 > angelView) {
-      return false; // angel does not know where is ivanko
+    if (d2 > angelView) { // angel does not know where is ivanko
+      if (d1 < presumablyDistance) {
+        return true;
+      } else {
+        return false;
+      }
     }
 
     // angel can see both
